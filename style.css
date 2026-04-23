@@ -1,0 +1,189 @@
+/* Definições Gerais */
+:root {
+    --lilac-dark: #8e44ad;
+    --lilac-light: #f3e5f5;
+    --lilac-accent: #c8a2c8;
+    --white: #ffffff;
+    --black: #2d3436;
+    --gray: #636e72;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: var(--black);
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+.resume-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--white);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--lilac-dark);
+    color: var(--white);
+    padding: 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.2);
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 0.9rem;
+}
+
+.contact-info a {
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+/* Layout de Colunas */
+.main-content {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    gap: 0;
+}
+
+section {
+    padding: 30px;
+}
+
+.left-col {
+    border-right: 2px solid var(--lilac-light);
+}
+
+.right-col {
+    background-color: #fafafa;
+}
+
+/* Títulos das Seções */
+.title-section {
+    font-size: 1.2rem;
+    color: var(--lilac-dark);
+    text-transform: uppercase;
+    border-left: 5px solid var(--lilac-dark);
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Itens de Experiência */
+.exp-item {
+    margin-bottom: 25px;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exp-header strong {
+    font-size: 1.1rem;
+}
+
+.exp-header span {
+    font-size: 0.85rem;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+.role {
+    color: var(--lilac-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+ul {
+    list-style: none;
+}
+
+.exp-item ul li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+.exp-item ul li::before {
+    content: "•";
+    color: var(--lilac-dark);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Coluna Direita (Educação e Cursos) */
+.edu-item {
+    margin-bottom: 20px;
+}
+
+.edu-item strong {
+    display: block;
+    font-size: 1rem;
+}
+
+.edu-item p {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.edu-item .date {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--lilac-dark);
+}
+
+.skills-list li {
+    background: var(--lilac-light);
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    border-left: 3px solid var(--lilac-dark);
+}
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    .left-col {
+        border-right: none;
+        border-bottom: 2px solid var(--lilac-light);
+    }
+}
